@@ -29,11 +29,6 @@ class _GameHomePageState extends State<GameHomePage> {
   bool isPlayer1Turn = Random().nextBool();
 
   void _handleTap(bool isPlayer1Area) {
-    if ((isPlayer1Turn && isPlayer1Area) ||
-        (!isPlayer1Turn && !isPlayer1Area)) {
-      return; // Prevent tapping on your own area
-    }
-
     setState(() {
       if (isPlayer1Turn) {
         player2Lives--;
